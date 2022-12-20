@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Space, Spin } from "antd";
+import "./App.css";
+import { DistrictDescripton } from "./components/DistrictDescripton";
+import { Selects } from "./components/Selects";
+import { useAppSelector } from "./redux/store";
 
 function App() {
+  const loading = useAppSelector((state) => state.IBGE.loading);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <h2>API Localidades - IBGE</h2>
+      <h4>Descrição dos distritos por estado e município</h4>
+      <Selects />
+      {loading ? (
+        <Space
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "10%",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <Spin tip="Carregando..." />
+        </Space>
+      ) : (
+        <DistrictDescripton />
+      )}
     </div>
   );
 }

@@ -1,15 +1,33 @@
-## Simple Hosting
+# API Localidades - IBGE
 
-->> https://ibge-api.netlify.app/
+Projeto simples para listar os distritos por estado e município utilizando a API de Localidades do IBGE.
 
-## Available Scripts
+## Link de Demonstração
+A aplicação está hospedada em:
+🔗 [IBGE API - Netlify](https://ibge-api.netlify.app/)
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
+- **Frontend**: React
+- **Estilização**: CSS puro
+- **Consumo de API**: Fetch API
 
-### `npm start`
+## Configuração e Execução
+Antes de iniciar, certifique-se de ter instalado:
+- [Node.js](https://nodejs.org/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Passos para rodar o projeto
+1. Instalar dependências:
+   ```sh
+   npm install
+   ```
+2. Iniciar o servidor de desenvolvimento:
+   ```sh
+   npm start
+   ```
+3. Acessar no navegador:
+   ```
+   http://localhost:3000
+   ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Contribuição
+Para contribuir, abra um **pull request** ou relate problemas na aba de **issues**.
